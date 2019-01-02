@@ -20,7 +20,9 @@ func main() {
         id := c.Query("id")
         c.String(http.StatusOK, "Hello id%s", id)
 	})
-	
+
+
+
 	router.POST("/post", func(c *gin.Context) {
 
         id := c.Query("id")
@@ -30,5 +32,7 @@ func main() {
 
         fmt.Printf("id: %s; page: %s; name: %s; message: %s", id, page, name, message)
     })
-    router.Run(":8080")
+	router.Run(":8080")
+
+
  }
