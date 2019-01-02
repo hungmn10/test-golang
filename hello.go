@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"time"
+	"math/rand"
 )
 
-func main() {
+func main1() {
 	fmt.Println("Welcome to the playground!")
 	log :=fmt.Println
 
@@ -36,4 +37,23 @@ func main() {
 
 	log("The american time is",timeAmerica,timeAmerica.Unix())
 	log("The vietnam time is",timeVietnam,timeVietnam.Unix())
+
+
+	log("====================================")
+	log("==================Test with math====")
+	log("====================================")
+	log("My favorite number is", rand.Intn(9))
+
+	log("========================================")
+	log("==================Test with for loop====")
+	log("========================================")
+	start := time.Now().Unix()
+	var sum int64 = 1
+	for ; sum < 10000000000; {
+		sum += 1
+		//fmt.Println(sum)
+	}
+	t := time.Now().Unix()
+	elapsed := t-start
+	log(sum, elapsed)
 }
