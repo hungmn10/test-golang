@@ -55,4 +55,6 @@ func main1() {
 	t := time.Now().Unix()
 	elapsed := t-start
 	log(sum, elapsed)
+
+	
 }
